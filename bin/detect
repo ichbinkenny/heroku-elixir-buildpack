@@ -1,6 +1,8 @@
 #!/bin/sh
 
-if [ -f $1/Elixir]; then
+mix-script-loc = "$1/mix.exs"
+
+if [ -f $mix-script-loc]; then
     echo "Elixir!"
     exit 0
 else
