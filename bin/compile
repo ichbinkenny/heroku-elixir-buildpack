@@ -1,8 +1,8 @@
 #!/bin/sh
 
-build_dir = "$1"
-cache_dir = "$2"
-env_dir - "$3"
+build_dir=$(cd $1 && pwd)
+cache_dir=$(cd $2 && pwd)
+env_dir=$(cd $3 && pwd)
 
 cd build_dir
 echo "Fetching latest Erlang..."
