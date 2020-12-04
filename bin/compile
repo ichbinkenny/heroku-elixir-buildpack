@@ -1,3 +1,8 @@
 #!/bin/sh
 
-printf "Not implemented\n"
+build_dir = "$1"
+cache_dir = "$2"
+env_dir - "$3"
+
+cd build_dir
+mix compile

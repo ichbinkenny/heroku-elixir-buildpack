@@ -3,7 +3,7 @@
 mix_script_loc = "$1/mix.exs"
 
 if [ -f $mix_script_loc]; then
-    echo "Elixir!"
+    echo "Elixir App Detected"
     exit 0
 else
     echo "Shit son."
