@@ -1,10 +1,11 @@
 #!/bin/sh
 
-mix-script-loc = "$1/mix.exs"
+mix_script_loc = "$1/mix.exs"
 
-if [ -f $mix-script-loc]; then
+if [ -f $mix_script_loc]; then
     echo "Elixir!"
     exit 0
 else
+    echo "Shit son."
     exit 1
 fi
