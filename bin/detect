@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ -f $1/Elixir]; then
+    echo "Elixir!"
+    exit 0
+else
+    exit 1
+fi
