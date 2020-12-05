@@ -3,8 +3,13 @@
 build_dir=$(cd $1 && pwd)
 cache_dir=$(cd $2 && pwd)
 env_dir=$(cd $3 && pwd)
+erlang_folder=$($cache_dir/erlang)
 
 cd build_dir
 echo "Fetching latest Erlang..."
 wget -o "${cache_dir}/erlang.tar.gz" https://erlang.org/download/otp_src_23.1.tar.gz || exit 1 
 printf "Downloaded Erlang. Size: %d\n" $(wc -c < $cache_dir/erlang.tar.gz)
+echo "Installing Erlang..."
+tar xf ${cache_dir}/erlang.tar.gz -C ${erlang_folder}
+cd ${erlang_folder}
+./Install -minimal || exit 1
